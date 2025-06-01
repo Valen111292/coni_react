@@ -19,14 +19,30 @@ Inicia el proyecto:
 
 npm start
 
-## 🗃️ Base de datos (MySQL)
+## 🗃️ Tabla de base de datos (MySQL)
 
-Este proyecto necesita una base de datos llamada `coni`.
+Este proyecto necesita una tabla llamada `equipos`.
 
-### Cómo crearla:
+### Cómo crearla en phpMyAdmin:
 
-1. Abre tu programa de base de datos (como **phpMyAdmin** o **MySQL Workbench**).
-2. Ejecuta el archivo `basededatos.sql` que está en este repositorio.
-3. Verifica que la tabla `equipos` se haya creado correctamente.
+1. Abre phpMyAdmin.
+2. Entra a tu base de datos (por ejemplo, `coni`).
+3. Haz clic en la pestaña **SQL**.
+4. Ingresa el siguiente codigo.
 
-> Si usas XAMPP, asegúrate de que MySQL esté encendido antes de ejecutar el script.
+  -- Crear tabla equipos_perifericos
+
+CREATE TABLE IF NOT EXISTS equipos_perifericos (
+  n_inventario VARCHAR(512) DEFAULT NULL,
+  n_serie VARCHAR(512) DEFAULT NULL,
+  clase VARCHAR(512) DEFAULT NULL,
+  marca VARCHAR(512) DEFAULT NULL,
+  ram VARCHAR(512) DEFAULT NULL,
+  disco VARCHAR(512) DEFAULT NULL,
+  procesador VARCHAR(512) DEFAULT NULL,
+  estado VARCHAR(512) DEFAULT NULL
+);
+
+6. Haz clic en **Continuar**.
+
+La tabla se creará automáticamente.
